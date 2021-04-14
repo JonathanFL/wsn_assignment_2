@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "inttypes.h": "c",
+        "dct_utilities.h": "c",
+        "math.h": "c",
+        "leds.h": "c",
+        "energest.h": "c"
+    }
+}
