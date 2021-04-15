@@ -17,6 +17,8 @@ N = 512, M = 120
 
 Execution time: 20 minutes
 
+Energy consumption: 
+
 mse = 0.1190
 
 ![picture alt](N_512.png "DCT II")
@@ -24,6 +26,8 @@ mse = 0.1190
 N = 256, M = 75
 
 Execution time: 3 minutes
+
+Energy consumption: 
 
 mse = 0.1554
 
