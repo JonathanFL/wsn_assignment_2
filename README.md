@@ -13,11 +13,13 @@ Here N is the signal length and M is the number of selected DCT coefficients.
 ## Results
 
 N = 512, M = 120
+
 mse = 0.1190
 
 ![picture alt](N_512.png "DCT II")
 
 N = 256, M = 75
+
 mse = 0.1554
 
 ![picture alt](N_256.png "DCT II")
