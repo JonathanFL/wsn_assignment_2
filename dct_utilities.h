@@ -10,12 +10,13 @@
 #define _M 120
 #define IDLE_MODE_EC 26.1
 #define MY_PI       3.14159265358979323846
+#define uint unsigned int
 
 #define LOG_MODULE "Assignment2 Log Module"
 #define LOG_LEVEL LOG_LEVEL_DBG
 
 void dct();
-void print_array(const double *m, const int length);
+void print_array(const double *m, const uint length);
 void print_double(double F);
 void to_minutes(unsigned long* time);
 
@@ -28,13 +29,13 @@ void print_double(double number)
     double integral;
     double fractional = modf(number, &integral);
     fractional = fractional<0 ? fractional*(-1) : fractional;
-    printf("%d.%d, ", (unsigned int)integral, (unsigned int)(fractional*10000));
+    printf("%d.%d, ", (uint)integral, (uint)(fractional*10000));
 }
 
-void print_array(const double *m, const int length)
+void print_array(const double *m, const uint length)
 {
   LOG_DBG("print_array\n[");
-  int i;
+  uint i;
   for (i = 0; i < length; i++)
   {
     print_double(m[i]);
@@ -44,7 +45,7 @@ void print_array(const double *m, const int length)
 
 void dct()
 {
-  int k,n;
+  uint k,n;
   double loop_1_constant = 0;
   for (k = 0; k <= _M; k++)
   {
@@ -58,6 +59,32 @@ void dct()
     //printf("Inner loop done - iteration #%d\n", k);
   }
 }
+
+// should do the same as the above implementation, but takes longer time
+/*
+void dct()
+{
+  uint k,n;
+  double loop_1_constant = 0;
+  for (k = 0; k <= _N; k++)
+  {
+    transformed_signal[k] = 0;
+    loop_1_constant = divider_constant * k;// k does not change until outter loop
+    for (n = 0; n < _N; n++)
+    {
+      //printf("n = %d\n", n);
+      transformed_signal[k] += ecg_signal[n]*cos(loop_1_constant*(n+0.5));
+    }
+    //printf("Inner loop done - iteration #%d\n", k);
+  }
+
+  uint i;
+  for (i = _M; i <= _N; i++)
+  {
+      transformed_signal[i] = 0;
+  }
+}
+*/
 
 void to_minutes(unsigned long *time)
 {
