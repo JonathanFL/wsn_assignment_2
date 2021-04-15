@@ -21,7 +21,7 @@ It states that the current it draws from being in active mode (not sleeping) is 
 
 computing time * 21 µA
 
-The signal used for the transformation can be found in [Named Link](https://github.com/JonathanFL/wsn_assignment_2/blob/master/dct_utilities.h "dct_utilities.h")
+The signal used for the transformation can be found in [dct_utilities.h](https://github.com/JonathanFL/wsn_assignment_2/blob/master/dct_utilities.h "dct_utilities.h")
 
 ## Build steps
 
