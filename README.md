@@ -17,7 +17,7 @@ https://www.willow.co.uk/TelosB_Datasheet.pdf
 
 It states that the current it draws from being in active mode (not sleeping) is 1.8 mA. Then the total energy consumption must be:
 
-computing time :heavy_multiplication_x: 1.8 mA.
+computing time :multiplication_x: 1.8 mA.
 
 ## Results
 
