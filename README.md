@@ -15,9 +15,9 @@ For calculating the energy consumption, the datasheet for the TelosB mote is use
 
 https://www.willow.co.uk/TelosB_Datasheet.pdf
 
-It states that the current it draws from being in active mode (not sleeping) is 1.8 mA. Then the total energy consumption must be:
+It states that the current it draws from being in active mode (not sleeping) is 21 µA. Then the total energy consumption must be:
 
-computing time __*__ 1.8 mA.
+computing time __*__ 21 µA
 
 ## Results
 
