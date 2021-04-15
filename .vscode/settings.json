@@ -4,6 +4,10 @@
         "dct_utilities.h": "c",
         "math.h": "c",
         "leds.h": "c",
-        "energest.h": "c"
+        "energest.h": "c",
+        "clock.h": "c",
+        "log.h": "c",
+        "contiki.h": "c",
+        "button-sensor.h": "c"
     }
 }

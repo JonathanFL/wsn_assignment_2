@@ -1,6 +1,4 @@
 #include "dct_utilities.h"
-#define LOG_MODULE "Assignment2 Log Module"
-#define LOG_LEVEL LOG_LEVEL_DBG
 
 /*---------------------------------------------------------------------------*/
 PROCESS(dct_process, "Compute dct");
@@ -11,26 +9,21 @@ AUTOSTART_PROCESSES(&dct_process);
 PROCESS_THREAD(dct_process, ev, data)
 {
   PROCESS_BEGIN();
+  LOG_DBG("START - Transforming signal \n");
   clock_init();
-  ulong_t t1;
-  ulong_t t2;
-  ulong_t execution_time;
-
-  SENSORS_ACTIVATE(button_sensor);
-  while (1)
-  {
-    printf("Press any button to calculate the dct of the constant egc signal\n");
-    PROCESS_WAIT_EVENT_UNTIL(ev == sensors_event && data == &button_sensor);
-    //energest_flush(); // maybe to be used for power consumption
-    t1 = clock_seconds();
-    dct();
-    t2 = clock_seconds();
-    execution_time = t2-t1;
-    execution_time = to_minutes(execution_time);
-    printf("Execution time: %lu minutes\n", (ulong_t)(execution_time));
-    printf("Energy consumption: %lu mA\n", energy_consumption(execution_time));
-    printf("Transformed signal:\n");
-    print_array(transformed_signal);
-  }
+  unsigned long t1;
+  unsigned long t2;
+  unsigned long execution_time;
+  LOG_DBG("N = %d and M = %d\n", _N, _M);
+  t1 = clock_seconds();
+  dct();
+  t2 = clock_seconds();
+  execution_time = t2-t1;
+  printf("Energy consumption: %lu mA\n", (unsigned long)energy_consumption(execution_time));
+  to_minutes(&execution_time);
+  printf("Execution time: %lu minutes\n", (unsigned long)(execution_time));
+  printf("Transformed signal:\n");
+  print_array(transformed_signal, _N);
+  LOG_DBG("END - Process stopped\n");
   PROCESS_END();
 }

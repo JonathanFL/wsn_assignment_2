@@ -1,7 +1,23 @@
-The compute_distance_matrix and the compute_accumulated_cost_matrix is made from the implementations from
-https://towardsdatascience.com/an-illustrative-introduction-to-dynamic-time-warping-36aa98513b98
-that was supplied from the assignment.
+# WSN Assignment 2 - Discrete Cosine Transformation in TelosB Mote/Cooja#
 
-All my global variables are static, but for better code, some of them could be made local and sent as data in the process_start.
+DCT-II transform of a length N signal x is given as,
+![picture alt](https://wikimedia.org/api/rest_v1/media/math/render/svg/dce6d60796ea026a5a7564418d130effde90d9cf "DCT II")
 
-When the program start, you should input the secret. When the blue light turn on, you should input the guess/repeat secret.
+Tasks completed are:
+- [x] Implemented and measured the execution time and energy consumption for the following cases:
+     - [x] N = 256 and M = 75.
+     - [x] N = 512 and M = 120.
+- [x] Measure the mean square error between the original signal and reconstructed signal for both the cases.
+Here N is the signal length and M is the number of selected DCT coefficients.
+
+## Results
+
+N = 512, M = 120
+mse = 0.1190
+
+![picture alt](N_512.png "DCT II")
+
+N = 256, M = 75
+mse = 0.1554
+
+![picture alt](N_256.png "DCT II")
