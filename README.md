@@ -27,7 +27,7 @@ computing time __*__ 21 µA
 
 Execution time: 20 minutes
 
-Energy consumption: 
+Energy consumption: 1200 * 21 µA = 25.200 mA
 
 mse = 0.1190
 
@@ -39,7 +39,7 @@ mse = 0.1190
 
 Execution time: 3 minutes
 
-Energy consumption: 
+Energy consumption: 180 * 21 µA = 3.780 mA
 
 mse = 0.1554
 
