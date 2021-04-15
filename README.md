@@ -11,6 +11,12 @@ Tasks completed are:
 - [x] Measure the mean square error between the original signal and reconstructed signal for both the cases.
 Here N is the signal length and M is the number of selected DCT coefficients.
 
+For calculating the energy consumption, the datasheet for the TelosB mote is used:
+
+https://www.willow.co.uk/TelosB_Datasheet.pdf
+
+It states that the current it draws from being in active mode (not sleeping) is 1.8 mA. Then the total energy consumption must be the computing time :heavy_multiplication_x: 1.8 mA.
+
 ## Results
 
 ### N = 512, M = 120
