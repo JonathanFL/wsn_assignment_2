@@ -1,6 +1,7 @@
 # WSN Assignment 2 - Discrete Cosine Transformation in TelosB Mote/Cooja#
 
 DCT-II transform of a length N signal x is given as,
+
 ![picture alt](https://wikimedia.org/api/rest_v1/media/math/render/svg/dce6d60796ea026a5a7564418d130effde90d9cf "DCT II")
 
 Tasks completed are:
