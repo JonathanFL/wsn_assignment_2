@@ -1,4 +1,4 @@
-Link to github: https://github.com/JonathanFL/wsn_assignment_2/blob/master/README.md
+Link to github: https://github.com/JonathanFL/wsn_assignment_2
 
 # WSN Assignment 2 - Discrete Cosine Transformation in TelosB Mote/Cooja#
 
