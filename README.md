@@ -14,11 +14,15 @@ Here N is the signal length and M is the number of selected DCT coefficients.
 
 N = 512, M = 120
 
+Execution time: 20 minutes
+
 mse = 0.1190
 
 ![picture alt](N_512.png "DCT II")
 
 N = 256, M = 75
+
+Execution time: 3 minutes
 
 mse = 0.1554
 
