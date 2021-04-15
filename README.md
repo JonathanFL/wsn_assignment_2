@@ -21,6 +21,8 @@ Energy consumption:
 
 mse = 0.1190
 
+- - - -
+
 ![picture alt](N_512.png "DCT II")
 
 N = 256, M = 75
